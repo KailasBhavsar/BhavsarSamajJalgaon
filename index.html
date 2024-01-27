@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANDURBAR BHAVSAR SAMAJ</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #e0fff7, #dcfaff);
+            text-align: center;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            padding-bottom: 5px;
+            user-select: none;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #01759b, #2cd6e3);
+            color: rgb(255, 255, 255);
+            padding: 1px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin: -15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: -20px;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+        h5 {
+            font-size: 10px;
+            margin-top: -15px;
+            text-align: right ;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            color: red;
+        }
+        .logo-container {
+            position: relative;
+            margin-top: 10px;
+        }
+
+        .logo,
+        .mata-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 10%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 5%;
+        }
+
+        .logo {
+            left: 10%;
+            transform: translateX(-50%);
+        }
+
+        .mata-image {
+            right: 10%;
+            transform: translateX(50%);
+        }
+
+        .button-container {
+            text-align: left;
+            margin-top: 10px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .number-button {
+            background-color: #001f3f;
+            color: white;
+            border: none;
+            padding: 5px 5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            text-align: left;
+            transition: background-color 0.3s;
+            border-radius: 8px;
+        }
+
+        .number-button:hover {
+            background-color: #001a35;
+        }
+
+        .sub-buttons-container {
+            margin-top: 15px;
+        }
+
+        .sub-number-button {
+            background-color: #d9dbda;
+            color: rgb(0, 0, 0);
+            border: black;
+            padding: 8px 16px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            text-align: left;
+            transition: background-color 0.3s;
+            border-radius: 8px;
+        }
+
+        .sub-number-button:hover {
+            background-color: #e4e7e7;
+        }
+
+        .chart-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            border-bottom: 1px solid #000000;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            width: 30%;
+            border-right: 1px solid #dddddd;
+            background-color: #f2f2f2;
+        }
+
+        td {
+            width: 70%;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(248, 248, 246);
+            padding: 0px 0;
+            align-items: center;
+            white-space: nowrap;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        footer p {
+            animation: marquee 10s linear infinite;
+        }
+        
+        button {
+            width: 18%; /* Adjust the width of the button as needed */
+            padding: 8px; /* Adjust the padding as needed */
+            box-sizing: border-box; /* Ensure padding and border are included in the width */
+        }
+
+        .scrolling-text {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee-text {
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .logo,
+            .mata-image {
+                width: 50px;
+                height: 50px;
+                top: 5%;
+                margin: 1%;
+            }
+
+            .number-button,
+            .sub-number-button {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+
+            footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background-color: rgb(248, 248, 246);
+                padding: 0px ;
+                align-items: center;
+            }
+
+            .logo-container {
+                margin-top: 0px;
+            }
+            
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false">
+    <header>
+        <!-- Logo and Mata Image Container -->
+        <div class="logo-container">
+            <!-- Square Logo -->
+            <img src="logo.png" alt="Logo" class="logo">
+            <!-- Mata Image -->
+            <img src="mata.jpg" alt="Mata Image" class="mata-image">
+        </div>
+
+        <!-- Main Title -->
+        <h4>BHAVSAR SAMAJ <br> JALGAON</h4>
+        <h1>KHANESUMARI</h1>
+        <h4>Presented by-</h4>
+        <!-- Subheading -->
+        <h2>Bhavsar Samaj Bahuddeshiy Sansthha</h2>
+        <h5>(Reg. No : F- 21447)</h5>
+        
+    </header>
+    
+   <!-- New scrolling line section -->
+   <h3>खाली दिलेल्या यादीत आपले नाव नसेल तर खाली टच करून आपली माहिती मराठीत भरावी आणि सबमिट करा.
+   <br /> <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOuS-9G-9jHstrGvMqNLjgLDN0QeHNPlUFA-QTQfZr63zgJw/viewform?usp=sf_link" > Click Here</a>
+   <div style="text-align: center;">
+    <input type="text" id="mainButtonSearch" oninput="filterMainButtons()" placeholder="Search Main Buttons" style="width: 70%; padding: 8px;">
+    <button type="button" onclick="filterMainButtons()" style="width: 20%; padding: 8px;">Search</button>
+</div>
+</h3>
+
+<!-- Existing code for button container -->
+<ul class="button-container" id="buttonContainer"></ul>
+
+    <div class="chart-container" id="chartContainer"></div>
+    <footer>
+        <p>To add your information contact: Kailas Sharadchandra Bhavsar (8411850864)</p>
+    </footer>
+
+    <script>
+        
+        function filterMainButtons() {
+            var searchInput = document.getElementById('mainButtonSearch').value.toLowerCase();
+            var mainButtons = document.querySelectorAll('.number-button');
+    
+            mainButtons.forEach(function (mainButton) {
+                var mainButtonName = mainButton.textContent.toLowerCase();
+                var listItem = mainButton.parentNode;
+    
+                // Show or hide main buttons based on the search input
+                if (mainButtonName.includes(searchInput)) {
+                    listItem.style.display = 'block';
+                } else {
+                    listItem.style.display = 'none';
+                }
+            });
+        }
+        var lastClickedSubButton = null;
+var mainButtonNumberMap = new Map(); // Map to store main button names and their numbers
+
+// Function to generate buttons dynamically from CSV data
+var descriptionElement; // Variable to store the reference to the description element
+
+
+
+// Function to generate buttons dynamically from CSV data
+function generateButtonsFromCSV(csvData) {
+    var buttonContainer = document.getElementById('buttonContainer');
+    var rows = csvData.split('\n');
+    var mainButtonMap = new Map(); // Map to store main button names and their sub buttons
+
+    rows.forEach(function(row, index) {
+        if (index === 0) {
+            // Skip the header row
+            return;
+        }
+
+        var columns = row.split(',');
+        var mainButtonName = columns[0];
+        var subButtonName = columns[1];
+
+        if (!mainButtonMap.has(mainButtonName)) {
+            mainButtonMap.set(mainButtonName, []);
+        }
+
+        mainButtonMap.get(mainButtonName).push(subButtonName);
+    });
+
+    var buttonCount = 0; // To keep track of the number of buttons processed
+    mainButtonMap.forEach(function(subButtons, mainButtonName) {
+        var listItem = document.createElement('li');
+        var button = document.createElement('button');
+        var mainButtonNumber = getMainButtonNumber(mainButtonName); // Get or assign a number
+        button.className = 'number-button';
+        button.innerHTML = mainButtonNumber + '. ' + mainButtonName; // Add numbering
+        button.addEventListener('click', function() {
+            toggleSubButtons(this, subButtons);
+        });
+
+        listItem.appendChild(button);
+        buttonContainer.appendChild(listItem);
+
+        buttonCount++;
+
+        // Add short description after the 10th main button
+        if (buttonCount === 10) {
+            descriptionElement = document.createElement('p');
+            descriptionElement.innerHTML = 'This is a short description for the 10th main button.';
+            buttonContainer.appendChild(descriptionElement);
+        }
+        if (buttonCount === 20) {
+            descriptionElement = document.createElement('p');
+            descriptionElement.innerHTML = 'This is a short description for the 20th main button.';
+            buttonContainer.appendChild(descriptionElement);
+        }
+        if (buttonCount === 40) {
+            descriptionElement = document.createElement('p');
+            descriptionElement.innerHTML = 'This is a short description for the 40th main button.';
+            buttonContainer.appendChild(descriptionElement);
+        }
+    });
+}
+
+function getMainButtonNumber(mainButtonName) {
+    // Check if the main button is already assigned a number
+    if (mainButtonNumberMap.has(mainButtonName)) {
+        return mainButtonNumberMap.get(mainButtonName);
+    } else {
+        // Assign a new number and store in the map
+        var newNumber = mainButtonNumberMap.size + 1;
+        mainButtonNumberMap.set(mainButtonName, newNumber);
+        return newNumber;
+    }
+}
+
+function toggleSubButtons(clickedButton, subButtons) {
+    var subButtonsContainer = clickedButton.nextElementSibling;
+    if (descriptionElement) {
+        descriptionElement.style.display = 'none';
+    }
+    // Show or hide the sub-buttons container
+    if (!subButtonsContainer) {
+        // Create sub-buttons container
+        subButtonsContainer = document.createElement('div');
+        subButtonsContainer.className = 'sub-buttons-container';
+
+        // Create sub-buttons
+        subButtons.forEach(function(subButton) {
+            var subButtonElement = document.createElement('button');
+            subButtonElement.className = 'sub-number-button';
+            subButtonElement.innerHTML = subButton;
+            subButtonElement.addEventListener('click', function() {
+                toggleChart(this, subButton);
+            });
+            subButtonsContainer.appendChild(subButtonElement);
+        });
+
+        // Append sub-buttons container below the clicked button
+        clickedButton.parentNode.appendChild(subButtonsContainer);
+        if (descriptionElement) {
+            descriptionElement.style.display = 'none';
+        }
+    } else {
+        // Toggle the display of sub-buttons
+        subButtonsContainer.style.display = subButtonsContainer.style.display === 'none' ? 'block' : 'none';
+
+        // Hide the chart when hiding sub-buttons
+        if (subButtonsContainer.style.display === 'none') {
+            hideChart();
+        } else {
+            // Hide other sub-buttons when displaying sub-buttons
+            var allSubButtons = document.querySelectorAll('.sub-number-button');
+            allSubButtons.forEach(function(subButton) {
+                subButton.style.display = 'block';
+            });
+            if (descriptionElement) {
+                descriptionElement.style.display = 'block';
+            }
+        }
+    }
+
+    // Show or hide other main buttons
+    var mainButtons = document.querySelectorAll('.number-button');
+    mainButtons.forEach(function(mainButton) {
+        if (mainButton !== clickedButton) {
+            mainButton.style.display = mainButton.style.display === 'none' ? 'block' : 'none';
+        }
+    });
+
+    // Update the last clicked sub-button
+    lastClickedSubButton = (subButtonsContainer.style.display === 'block') ? clickedButton : null;
+}
+
+// Rest of your code remains unchanged...
+
+
+        function toggleChart(clickedSubButton, subButtonName) {
+            var chartContainer = document.getElementById('chartContainer');
+
+            // Toggle the display of the chart container
+            chartContainer.style.display = chartContainer.style.display === 'none' ? 'block' : 'none';
+
+            // Hide other sub-buttons when displaying a chart
+            var allSubButtons = document.querySelectorAll('.sub-number-button');
+            allSubButtons.forEach(function(subButton) {
+                if (subButton !== clickedSubButton) {
+                    subButton.style.display = 'none';
+                }
+            });
+
+            // Hide the chart when toggling
+            if (chartContainer.style.display === 'none') {
+                // Show all sub-buttons when hiding the chart
+                allSubButtons.forEach(function(subButton) {
+                    subButton.style.display = 'block';
+                });
+            } else {
+                // Show the chart with data associated with the clicked sub-button
+                showChartWithData(subButtonName);
+            }
+        }
+
+        function showChartWithData(subButtonName) {
+            var chartContainer = document.getElementById('chartContainer');
+
+            // Fetch data for the clicked sub-button from CSV
+            fetchDataForSubButton(subButtonName)
+                .then(data => {
+                    // Create a table with the specified columns and rows
+                    var table = document.createElement('table');
+                    var dataHtml = '';
+
+                    for (var key in data) {
+                        // Exclude MainButtonName and SubButtonName from the displayed chart
+                        if (key !== 'MainButtonName' && key !== 'SubButtonName') {
+                            dataHtml += `
+                                <tr>
+                                    <th>${key}</th>
+                                    <td>${data[key]}</td>
+                                </tr>`;
+                        }
+                    }
+
+                    table.innerHTML = dataHtml;
+
+                    // Append the table to the chart container
+                    chartContainer.innerHTML = '';
+                    chartContainer.appendChild(table);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        function hideChart() {
+            var chartContainer = document.getElementById('chartContainer');
+            // Hide the chart container
+            chartContainer.style.display = 'none';
+
+            // Show all sub-buttons when hiding the chart
+            var allSubButtons = document.querySelectorAll('.sub-number-button');
+            allSubButtons.forEach(function(subButton) {
+                subButton.style.display = 'block';
+            });
+
+            // Show the last clicked sub-button if exists
+            if (lastClickedSubButton) {
+                lastClickedSubButton.style.display = 'block';
+            }
+        }
+
+        // Function to fetch data for a specific sub-button from CSV
+        function fetchDataForSubButton(subButtonName) {
+            // Replace this with your actual CSV file path
+            var csvFilePath = 'generated_data.csv';
+
+            // Fetch CSV data using a fetch API
+            return fetch(csvFilePath)
+                .then(response => response.text())
+                .then(csvData => {
+                    var rows = csvData.split('\n');
+                    var header = rows[0].split(',');
+                    var dataIndex = header.indexOf('SubButtonName');
+
+                    for (var i = 1; rows.length && i < rows.length; i++) {
+                        var columns = rows[i].split(',');
+                        if (columns[dataIndex] === subButtonName) {
+                            var rowData = {};
+                            for (var j = 0; j < header.length; j++) {
+                                rowData[header[j]] = columns[j];
+                            }
+                            return rowData;
+                        }
+                    }
+
+                    return null; // Sub-button not found
+                })
+                .catch(error => {
+                    console.error('Error fetching CSV data:', error);
+                });
+        }
+
+        // Call the function to fetch CSV data and generate buttons
+        fetchDataAndGenerateButtons();
+
+function fetchDataAndGenerateButtons() {
+    // Replace this with your actual CSV file path
+    var csvFilePath = 'generated_data.csv';
+
+    // Fetch CSV data using a fetch API
+    fetch(csvFilePath)
+        .then(response => response.text())
+        .then(csvData => {
+            generateButtonsFromCSV(csvData);
+        })
+        .catch(error => {
+            console.error('Error fetching CSV data:', error);
+        });
+}
+    </script>
+    <style>
+        .scrolling-line {
+            background-color: yellow;
+            padding: 5px; /* Adjust padding as needed */
+            margin: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .marquee-text {
+            display: inline-block;
+            animation: marquee 20s linear infinite; /* Adjust speed by changing animation duration */
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</body>
+</html>
