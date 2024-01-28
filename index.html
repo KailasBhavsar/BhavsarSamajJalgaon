@@ -326,22 +326,7 @@ function generateButtonsFromCSV(csvData) {
 
         buttonCount++;
 
-        // Add short description after the 10th main button
-        if (buttonCount === 10) {
-            descriptionElement = document.createElement('p');
-            descriptionElement.innerHTML = 'This is a short description for the 10th main button.';
-            buttonContainer.appendChild(descriptionElement);
-        }
-        if (buttonCount === 20) {
-            descriptionElement = document.createElement('p');
-            descriptionElement.innerHTML = 'This is a short description for the 20th main button.';
-            buttonContainer.appendChild(descriptionElement);
-        }
-        if (buttonCount === 40) {
-            descriptionElement = document.createElement('p');
-            descriptionElement.innerHTML = 'This is a short description for the 40th main button.';
-            buttonContainer.appendChild(descriptionElement);
-        }
+        
     });
 }
 
